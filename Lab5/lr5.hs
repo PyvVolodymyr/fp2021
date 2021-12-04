@@ -40,18 +40,18 @@ keyboardFile = do
 -- Варіант 3: Файл --> Консоль
 
 fileConsole = do
-	list <- readFile "D:\\fp2021\\Lab5\\inputRow.txt"
+	row <- readFile "D:\\fp2021\\Lab5\\inputRow.txt"
 	number <- readFile "D:\\fp2021\\Lab5\\inputNumber.txt"
 	let n = read number :: Int
-	let result = delElem n list
+	let result = delElem n row
 	print result
 
 
 -- Варіант 4: Файл --> Файл
 
 fileFile = do
-	list <- readFile "D:\\fp2021\\Lab5\\inputRow.txt"
+	row <- readFile "D:\\fp2021\\Lab5\\inputRow.txt"
 	number <- readFile "D:\\fp2021\\Lab5\\inputNumber.txt"
 	let n = read number :: Int
-	let result = delElem n list
+	let result = delElem n row
 	writeFile "D:\\fp2021\\Lab5\\outputFromFile.txt" (show result)
